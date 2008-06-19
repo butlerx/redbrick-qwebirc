@@ -1,0 +1,9 @@
+syntax: glob
+static\js\uglyui.js
+static\js\swmui.js
+static\js\qwebirc.js
+static\js\debug
+qwebirc\config.py
+dropin.cache
+*.tap
+*.pyc
