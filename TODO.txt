@@ -1,0 +1,4 @@
+IE7
+IE6
+ping timeout bug?
+opera weirdness

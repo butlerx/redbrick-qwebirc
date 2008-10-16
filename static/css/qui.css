@@ -1,0 +1,188 @@
+.qwebirc-qui .tabbar {
+  border-bottom: 1px solid #c3cee0;
+  padding: 4px;
+  background: #e2ecf9;
+  font-size: 0.8em;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+}
+
+.qwebirc-qui a.tab {
+  border: 1px solid #c8d2dc;
+  padding: 2px;
+  cursor: default;
+  margin-right: 2px;
+}
+
+.qwebirc-qui a.tab {
+  text-decoration: none;
+  color: #000000;
+}
+
+.qwebirc-qui .tab:hover {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.qwebirc-qui .tab-selected {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #333333;
+}
+
+.qwebirc-qui .input input {
+  border: 0px;
+  margin: 2px 0px 0px 0px;
+  width: 99%;
+  font-family: Verdana, sans-serif;
+}
+
+.qwebirc-qui div.input {
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  border-top: 1px solid #c8d2dc;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.qwebirc-qui .tabclose {
+  margin-left: 5px;
+  font-size: 0.6em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.qwebirc-qui .nicklist {
+  border-left: 1px solid #c8d2dc;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 125px;
+  overflow: auto;
+  background: #f2f0ff;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .tab-invisible {
+  display: none;
+}
+
+/*.qwebirc-qui .linestyle1 {
+  background: #efefef;
+}
+
+.qwebirc-qui .linestyle2 {
+  background: #eeffff;
+}*/
+
+.qwebirc-qui a.tab-hilighted {
+  color: red;
+}
+
+.qwebirc-qui .topic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: #F2F0FF;
+  border-bottom: 1px dashed #c8d2dc;
+}
+
+.qwebirc-qui .topic .emptytopic {
+  color: grey;
+}
+
+.qwebirc-qui .topic {
+  color: grey;
+  font-family: Verdana, sans-serif;
+  padding-left: 5px;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .lines {
+  overflow: auto;
+  position: absolute;
+  left: 0px;
+  font-family: Verdana;
+  font-size: 0.8em;
+  background: #f2f0ff;
+}
+
+.qwebirc-qui .lines div {
+  padding-left: 5px;
+}
+
+.qwebirc-qui .window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.qwebirc-qui .outercontainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.qwebirc-qui .container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.qwebirc-qui .loginbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .loginbox .tr1 {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.qwebirc-qui .confirmbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .confirmbox .tr1 td {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .confirmbox .tr2 td {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.qwebirc-qui form {
+  margin: 0px;
+  padding: 0px;
+}
