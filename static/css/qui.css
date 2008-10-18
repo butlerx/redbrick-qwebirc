@@ -1,0 +1,182 @@
+.qwebirc-qui .loginbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .loginbox .tr1 {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.qwebirc-qui .confirmbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .confirmbox .tr1 td {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .confirmbox .tr2 td {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+.qwebirc-qui .dynamicpanel {
+  position: absolute;
+}
+.qwebirc-qui .widepanel, .leftboundpanel {
+  left: 0px;
+}
+.qwebirc-qui .widepanel {
+  width: 100%;
+}
+.qwebirc-qui .topboundpanel {
+  top: 0px;
+}
+.qwebirc-qui .rightboundpanel {
+  /*right: 0px;*/
+}
+.qwebirc-qui .bottomboundpanel {
+  color: red;
+}
+
+.qwebirc-qui .lines {
+  overflow: auto;
+  font-family: Consolas, Verdana, sans-serif, "sans serif";
+  font-size: 0.8em;
+  background: #f2f0ff;
+}
+
+.qwebirc-qui .nicklist {
+  border-left: 1px solid #c8d2dc;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 125px;
+  overflow: auto;
+  background: #f2f0ff;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .tabbar {
+  border-bottom: 1px solid #c3cee0;
+  background: #e2ecf9;
+  font-size: 0.8em;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+}
+
+.qwebirc-qui .tab-invisible {
+  display: none;
+}
+
+.qwebirc-qui .input input {
+  border: 0px;
+  margin: 2px 0px 0px 0px;
+  width: 99%;
+  font-family: Verdana, sans-serif;
+}
+
+.qwebirc-qui form {
+  margin: 0px;
+  padding: 0px;
+}
+
+.qwebirc-qui .topic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: #F2F0FF;
+  border-bottom: 1px dashed #c8d2dc;
+}
+
+.qwebirc-qui .topic .emptytopic {
+  color: grey;
+}
+
+.qwebirc-qui .topic {
+  color: grey;
+  font-family: Verdana, sans-serif;
+  padding-left: 5px;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .tabbar {
+  border-bottom: 1px solid #c3cee0;
+  padding: 4px;
+  background: #e2ecf9;
+  font-size: 0.8em;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+}
+
+.qwebirc-qui a.tab {
+  border: 1px solid #c8d2dc;
+  padding: 2px;
+  cursor: default;
+  margin-right: 2px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.qwebirc-qui a.tab {
+  text-decoration: none;
+  color: #000000;
+}
+
+.qwebirc-qui .tab:hover {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.qwebirc-qui .tab-selected {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #333333;
+}
+
+.qwebirc-qui div.input {
+  border-top: 1px solid #c3cee0;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.qwebirc-qui .tabclose {
+  margin-left: 5px;
+  font-size: 0.6em;
+  vertical-align: top;
+  padding-left: 3px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
