@@ -1,0 +1,11 @@
+IRCSERVER, IRCPORT = "moo.com", 6667
+HMACKEY = "mrmoo"
+HMACTEMPORAL = 30
+UPDATE_FREQ = 0.5
+MAXBUFLEN = 10000
+MAXSUBSCRIPTIONS = 3
+REALNAME = "http://moo.com/"
+MAXLINELEN = 600
+AUTHGATEDOMAIN = "webchat_test"
+QTICKETKEY = "boo"
+QBOT = "Q@CServe.quakenet.org"

@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
+}
+
+#ircui {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.qwebirc-qui .loginbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .loginbox .tr1 {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.qwebirc-qui .loginbox .tr2 table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.qwebirc-qui .confirmbox {
+  font-family: Verdana, sans-serif;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-qui .confirmbox .tr1 td {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-qui .confirmbox .tr2 td {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.qwebirc-qui .dynamicpanel {
+  position: absolute;
+}
+.qwebirc-qui .widepanel, .leftboundpanel {
+  left: 0px;
+}
+.qwebirc-qui .widepanel {
+  width: 100%;
+}
+.qwebirc-qui .topboundpanel {
+  top: 0px;
+}
+.qwebirc-qui .rightboundpanel {
+  /*right: 0px;*/
+}
+.qwebirc-qui .bottomboundpanel {
+  color: red;
+}
+
+.qwebirc-qui .lines {
+  color: black;
+  overflow: auto;
+  font-family: Consolas, "Lucida Console", Verdana, monospace, sans-serif, "sans serif";
+  font-size: 0.8em;
+  background: #f2f0ff;
+}
+
+.qwebirc-qui .tabbar {
+  border-bottom: 1px solid #c3cee0;
+  background: #e2ecf9;
+  font-size: 0.8em;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+}
+
+.qwebirc-qui .tab-invisible {
+  display: none;
+}
+
+.qwebirc-qui .input input {
+  border: 0px;
+  margin: 2px 0px 0px 0px;
+  width: 99%;
+  font-family: Verdana, sans-serif;
+}
+
+.qwebirc-qui form {
+  margin: 0px;
+  padding: 0px;
+}
+
+.qwebirc-qui .topic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: #F2F0FF;
+  border-bottom: 1px dashed #c8d2dc;
+}
+
+.qwebirc-qui .topic .emptytopic {
+  color: gray;
+}
+
+.qwebirc-qui .topic {
+  color: gray;
+  font-family: Verdana, sans-serif;
+  padding-left: 5px;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .tabbar {
+  border-bottom: 1px solid #c3cee0;
+  padding: 4px;
+  background: #e2ecf9;
+  font-size: 0.8em;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+}
+
+.qwebirc-qui a.tab {
+  border: 1px solid #c8d2dc;
+  padding: 2px;
+  cursor: default;
+  margin-right: 2px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.qwebirc-qui a.tab {
+  text-decoration: none;
+  color: #000000;
+}
+
+.qwebirc-qui .tab:hover {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.qwebirc-qui .tab-selected {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #333333;
+}
+
+.qwebirc-qui div.input {
+  border-top: 1px solid #c3cee0;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.qwebirc-qui .tabclose {
+  margin-left: 5px;
+  font-size: 0.6em;
+  vertical-align: top;
+  padding-left: 3px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.qwebirc-qui a.tab-hilight-activity {
+  color: green;
+}
+
+.qwebirc-qui a.tab-hilight-speech {
+  color: blue;
+}
+
+.qwebirc-qui a.tab-hilight-us {
+  color: red;
+}
+
+.qwebirc-qui .nicklist {
+  border-left: 1px solid #c8d2dc;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 140px;
+  overflow: auto;
+  background: #f2f0ff;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .nicklist a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  cursor: default;
+  border-top: 1px solid #f2f0ff;
+  border-bottom: 1px solid #f2f0ff;
+  padding-left: 1px;
+}
+
+.qwebirc-qui .nicklist a.selected {
+  display: block;
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-bottom: #c8d2dc 1px solid;
+  cursor: default;
+}
+
+.qwebirc-qui .nicklist a.selected-middle {
+  border-top: #c8d2dc 1px solid;
+}
+
+div#noscript {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.qwebirc-qui .nicklist div.menu {
+  margin: 0px 0px 0px 5px;
+}
+
+.qwebirc-qui .nicklist div.menu a {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.qwebirc-qui .hyperlink-whois, .hyperlink-qwhois, .hyperlink-channel {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.qwebirc-qui .hyperlink-whois:hover, .hyperlink-qwhois:hover, .hyperlink-channel:hover {
+  text-decoration: underline;
+}
+
+.qwebirc-qui div.embeddedwizard {
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.qwebirc-qui .embeddedwizard input.text {
+  width: 300px;
+}
+
+.qwebirc-qui .embeddedwizard input.iframetext {
+  width: 95%;
+}
+
+.qwebirc-qui .embeddedwizard div.wizardcontrols {
+  position: absolute;
+  bottom: 3px;
+  right: 6px;
+}
+
+.qwebirc-qui .embeddedwizard .wizardcontrols input {
+  width: 70px;
+}
