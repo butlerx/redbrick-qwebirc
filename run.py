@@ -5,9 +5,25 @@ bin.compile.vcheck()
 
 DEFAULT_PORT = 9090
 
+from qwebirc.identd import IdentProtocol,IdentFactory
 from twisted.scripts.twistd import run
+from twisted.internet import reactor
 from optparse import OptionParser
-import sys, os, config
+import sys, os, grp, pwd, config
+
+def add_identd(ip):
+	if config.ENABLE_IDENTD:
+		reactor.listenTCP(113,IdentFactory(),interface=ip)
+		
+		# Demote self
+		if os.getgid() == 0:
+			new_gid = grp.getgrnam(config.RUNGID)[2]
+			os.setgroups([new_gid])
+			os.setgid(new_gid)
+		
+		if os.getuid() == 0:
+			new_uid = pwd.getpwnam(config.RUNUID)[2]
+			os.setuid(new_uid)
 
 def run_twistd(args1=None, args2=None):
   args = [sys.argv[0]]
@@ -72,4 +88,5 @@ else:
 
 args2+=["--ip", options.ip]
 
+add_identd(options.ip)
 run_twistd(args1, args2)

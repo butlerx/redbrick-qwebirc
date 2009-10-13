@@ -20,6 +20,12 @@ from qwebirc.config_options import *
 #         Port of IRC server to connect to.
 IRCSERVER, IRCPORT = "irc.myserver.com", 6667
 
+# OPTION: IRCCLIENTHOST
+#         The address that the IRC client should connect *from*. Set
+#         to None if you don't care, otherwise a string containing a
+#         hostname or IP address.
+IRCCLIENTHOST = None 
+
 # OPTION: REALNAME
 #         The realname field of IRC clients will be set to this value.
 REALNAME = "http://moo.com/"
@@ -32,7 +38,43 @@ REALNAME = "http://moo.com/"
 #          IDENT = IDENT_HEX
 #        - the literal value IDENT_NICKNAME, this will use the users
 #          supplied nickname as their ident.
+#        - the literal value IDENT_FORWARDED_USER, this will use the 
+#          value specified in the header set below. Typically sent by 
+#          mod_proxy, set by an external authentication process.
 IDENT = "webchat"
+
+# OPTION: IDENT_FORWARDED_USER_HEADER
+#         The IDENT_FORWARDED_USER option above causes qwebirc to use 
+#         the value specified in a HTTP header (typically set by 
+#         mod_proxy) as a user's ident. The header to use can be set 
+#         here.
+IDENT_FORWARDED_USER_HEADER = "X-Forwarded-User"
+
+# OPTION: ENABLE_IDENTD
+#         Whether or not to enable the built-in identd server. Some IRC
+#         daemons are set to require an ident server, which causes 
+#         problems with web based IRC clients, as they tend to run as 
+#         the web server user. Requires port 113 to be open, the RUNUID
+#         and RUNGID settings to be correctly set, and for the 
+#         application to be run initially as root (it will demote 
+#         itself once bound to port 113).
+ENABLE_IDENTD = False 
+
+# OPTION: RUNUID
+#         When identd is enabled (see ENABLE_IDENTD), the program must 
+#         initially run as root to bind to port 113. As soon as this has
+#         been achieved, the program will drop privileges to the user ID
+#         specified here
+RUNUID = "qwebirc"
+
+# OPTION: RUNGID
+#         The group ID to drop privileges to. See RUNUID for an 
+#         explanation.
+RUNGID = "qwebirc"
+
+# OPTION: IDENTD_OS
+#         The OS returned by identd.
+IDENTD_OS = "LINUX"
 
 # OPTION: WEBIRC_MODE
 #         This option controls how the IP/hostname of the connecting

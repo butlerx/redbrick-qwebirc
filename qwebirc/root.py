@@ -58,7 +58,7 @@ class ProxyRequest(server.Request):
       return real_ip
       
     return fake_ip
-    
+
 class RootSite(server.Site):
   # we do this ourselves as the built in timeout stuff is really really buggy
   protocol = TimeoutHTTPChannel
@@ -72,7 +72,7 @@ class RootSite(server.Site):
 
     services = {}
     services["StaticEngine"] = root.primaryChild = engines.StaticEngine(path)
-
+    
     def register(service, path, *args, **kwargs):
       sobj = service("/" + path, *args, **kwargs)
       services[service.__name__] = sobj

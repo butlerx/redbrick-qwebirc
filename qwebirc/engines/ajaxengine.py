@@ -216,14 +216,16 @@ class AJAXEngine(resource.Resource):
       ident = socket.inet_aton(ip).encode("hex")
     elif ident is config_options.IDENT_NICKNAME:
       ident = nick
-
+    elif ident is config_options.IDENT_FORWARDED_USER:
+	   ident = request.getHeader(config.IDENT_FORWARDED_USER_HEADER)
+     
     self.__connect_hit()
-
+    
     def proceed(hostname):
       kwargs = dict(nick=nick, ident=ident, ip=ip, realname=realname, perform=perform, hostname=hostname)
       if password is not None:
         kwargs["password"] = password
-        
+      
       client = ircclient.createIRC(session, **kwargs)
       session.client = client
 

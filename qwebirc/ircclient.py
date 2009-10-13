@@ -1,11 +1,14 @@
-import twisted, sys, codecs, traceback
+import twisted, os, sys, codecs, traceback
 from twisted.words.protocols import irc
 from twisted.internet import reactor, protocol
 from twisted.web import resource, server
 from twisted.protocols import basic
 
+import qwebirc.identd
+
 import hmac, time, config, qwebirc.config_options as config_options
 from config import HMACTEMPORAL
+
 
 if hasattr(config, "WEBIRC_MODE") and config.WEBIRC_MODE == "hmac":
   HMACKEY = hmac.HMAC(key=config.HMACKEY)
@@ -30,7 +33,7 @@ class QWebIRCClient(basic.LineReceiver):
   delimiter = "\n"
   def __init__(self, *args, **kwargs):
     self.__nickname = "(unregistered)"
-    
+  
   def dataReceived(self, data):
     basic.LineReceiver.dataReceived(self, data.replace("\r", ""))
 
@@ -74,7 +77,9 @@ class QWebIRCClient(basic.LineReceiver):
     nick, ident, ip, realname, hostname, pass_ = f["nick"], f["ident"], f["ip"], f["realname"], f["hostname"], f.get("password")
     self.__nickname = nick
     self.__perform = f.get("perform")
-
+    
+    qwebirc.identd.user_dict[self.transport.getHost().port] = ident 
+    
     if not hasattr(config, "WEBIRC_MODE"):
       self.write("USER %s bleh bleh %s :%s" % (ident, ip, realname))
     elif config.WEBIRC_MODE == "hmac":
@@ -141,7 +146,11 @@ class QWebIRCFactory(protocol.ClientFactory):
 
 def createIRC(*args, **kwargs):
   f = QWebIRCFactory(*args, **kwargs)
-  reactor.connectTCP(config.IRCSERVER, config.IRCPORT, f)
+  if config.IRCCLIENTHOST:
+    reactor.connectTCP(config.IRCSERVER, config.IRCPORT, f, bindAddress=(config.IRCCLIENTHOST,0))
+  else:
+    reactor.connectTCP(config.IRCSERVER,config.IRCPORT,f)
+  
   return f
 
 if __name__ == "__main__":
